@@ -1,37 +1,42 @@
-var box;
 
 function setup() {
   createCanvas(400,400);
-  box=createSprite(200,200,50,50)
+  background(51);
+  box = createSprite(200,200,30,30);
+
 }
 
 function draw() 
 {
-  background(120,120,50);
 
-  if(keyDown(UP_ARROW))
+  // write the code to change background color 
+  // to red when RIGHT_ARROW is pressed
+  
+  
+
+  if (keyIsDown(LEFT_ARROW)) 
   {
-    box.position.y=box.position.y - 8;
+    background("blue");
+    
   }
-  if(keyDown(DOWN_ARROW))
+ 
+    if (keyIsDown(UP_ARROW)) 
   {
-    box.position.y=box.position.y + 8;
+    background("yellow");
+   
   }
-  if(keyDown(RIGHT_ARROW))
+
+  if (keyIsDown(DOWN_ARROW)) 
   {
-    box.position.x=box.position.x + 8;
+    background("green");
   }
-  if(keyDown(LEFT_ARROW))
+
+  if (keyIsDown(RIGHT_ARROW)) 
   {
-    box.position.x=box.position.x - 8;
+    background("red");
   }
-  drawSprites()
+
+  
+  drawSprites();
 }
-
-
-
-
-
-
-
 
